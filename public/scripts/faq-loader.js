@@ -1,98 +1,50 @@
-const audio_faq = [{
-        "q": "Frage 1",
-        "a": "Lorem Ipsum 1"
-    },
-    {
-        "q": "Frage 2",
-        "a": "Lorem Ipsum 2"
-    },
-    {
-        "q": "Frage 3",
-        "a": "Lorem Ipsum 3"
-    }
-];
+import * as faqs from "./faq-data.js";
 
-const video_faq = [{
-        "q": "Frage 1",
-        "a": "Lorem Ipsum 1"
-    },
-    {
-        "q": "Frage 2",
-        "a": "Lorem Ipsum 2"
-    },
-    {
-        "q": "Frage 3",
-        "a": "Lorem Ipsum 3"
-    }
-];
+let faq;
 
-const licht_faq = [{
-        "q": "Frage 1",
-        "a": "Lorem Ipsum 1"
-    },
-    {
-        "q": "Frage 2",
-        "a": "Lorem Ipsum 2"
-    },
-    {
-        "q": "Frage 3",
-        "a": "Lorem Ipsum 3"
-    }
-];
+switch (window.location.pathname.split("/")[1].split("-")[0]) {
+    case "audio":
+        faq = faqs.audio;
+        document.title = "Audio - FAQ";
+        break;
+    case "video":
+        faq = faqs.video;
+        document.title = "Video - FAQ";
+        break;
+    case "licht":
+        faq = faqs.licht;
+        document.title = "Licht - FAQ";
+        break;
+    case "rigging":
+        faq = faqs.rigging;
+        document.title = "Rigging - FAQ";
+        break;
+}
 
-const rigging_faq = [{
-        "q": "Frage 1",
-        "a": "Lorem Ipsum 1"
-    },
-    {
-        "q": "Frage 2",
-        "a": "Lorem Ipsum 2"
-    },
-    {
-        "q": "Frage 3",
-        "a": "Lorem Ipsum 3"
-    }
-];
+const panelCreate = (faqray) => {
+    for (let obj of faqray) {
+        let button = document.createElement("button");
+        button.classList.add("dropdown");
+        button.innerText = obj["q"];
 
-window.onloadend = () => {
-    const faq;
+        button.addEventListener("click", (event) => {
+            event.target.classList.toggle("active");
+    
+            let panel = event.target.nextElementSibling;
 
-    switch (window.location.pathname.split("/")[1].split("-")[0]) {
-        case "audio":
-            faq = audio_faq;
-            break;
-        case "video":
-            faq = video_faq;
-            break;
-        case "licht":
-            faq = licht_faq;
-            break;
-        case "rigging":
-            faq = rigging_faq;
-            break;
-    }
+            panel.style.maxHeight = (panel.style.maxHeight ? null : `${panel.scrollHeight}px`);
+        });
 
-    for (let obj of faq) {
-        // TODO: this
+        let div = document.createElement("div");
+        div.classList.add("panel");
 
-        document.querySelector("#list").append(`<button class="dropdown">${obj["q"]}</button>`);
-        document.querySelector("#list").append(`<div class="panel"></div>`);
-        document.querySelector("div").append(`<p>${obj["a"]}</p>`);
+        let p = document.createElement("p");
+        p.innerText = obj["a"];
+
+        document.querySelector("#list").append(button);
+        document.querySelector("#list").append(div);
+        div.append(p);
     }
 }
 
-const drops = document.getElementsByClassName("dropdown");
-
-for (let i = 0; i < drops.length; i++) {
-    drops[i].addEventListener("click", (event) => {
-        event.target.classList.toggle("active");
-
-        let panel = event.target.nextElementSibling;
-
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    });
-}
+panelCreate(faq);

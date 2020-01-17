@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Alata|Roboto+Slab&display=swap');
+
 * {
-    font-family: sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 
 body {
-    background-color: #121212;
+    background-color: #2c3e50;
 }
 
 .dropdown {
@@ -12,16 +14,16 @@ body {
     outline: none;
     padding: 18px;
     cursor: pointer;
-    color: #121212;
+    color: #000000;
     text-align: left;
-    background-color: #6BB300;
-    transition: 0.2s;
+    font-family: "Alata", sans-serif;
+    font-size: 24px;
+    background-image: linear-gradient(90deg, #f1c40f, #e67e22);
+    transition: 0.1s;
 }
 
-.active,
-.dropdown:hover {
+.active, .dropdown:hover {
     color: #FFFFFF;
-    background-color: #477700;
 }
 
 .panel {
@@ -29,6 +31,8 @@ body {
     padding: 0 18px;
     overflow: hidden;
     color: #FFFFFF;
-    background-color: #7DD100;
-    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
+    background-color: #34495e;
+    box-shadow: 0 0 20px #000000;
+    transition: all 0.1s ease-in-out;
 }
