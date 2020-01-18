@@ -1,55 +1,70 @@
 export const audio = [{
-    "q": "Frage 1",
-    "a": "Lorem Ipsum 1"
+    "q": "Es kommt kein Ton?!",
+    "a": "Signalweg verfolgen und gucken ob alle Stecker drinnen stecken?; Vorverstärkung (Gain)?; Kanal-Fader?; Master?; Lautsprecher an?; Mischpult an?; Kabel kaputt? (testen/austauschen); Mikrofon kaputt?"
 },
 {
-    "q": "Frage 2",
-    "a": "Lorem Ipsum 2"
+    "q": "Mein Funkmikrofon geht nicht?!",
+    "a": "Gleiche Frequenz wie am Empfänger eingestellt?; Batterien geladen?; Bei Beltpacks - Mikrofon tauschen?; Kommt Funksignal an? (siehe RF-Skala am Empfänger)"
 },
 {
-    "q": "Frage 3",
-    "a": "Lorem Ipsum 3"
+    "q": "Es pfeift/brummt laut (Rückkopplung)",
+    "a": "Lautstärke des Kanals mit der Rückkopplung verringer, zur Not den Master leiser machen"
+},
+{
+    "q": "Die Hilfe-Seite hilft mir nicht weiter?!",
+    "a": "jetzt kann ein Techniker oder Sachkundiger um Hilfe gebeten werden"
 }
 ];
 
 export const video = [{
-    "q": "Frage 1",
-    "a": "Lorem Ipsum 1"
+    "q": "Der Beamer findet die Quelle nicht?!",
+    "a": "Erst den Laptop einschalten, dann den Beamer; zwischen HDMI und VGA wehcseln, wenn möglich"
 },
 {
-    "q": "Frage 2",
-    "a": "Lorem Ipsum 2"
+    "q": "Wo finde ich die Video-Kabel?!",
+    "a": "Auf der rechten Bühnenseite, hinter der schwarzen Wand"
 },
 {
-    "q": "Frage 3",
-    "a": "Lorem Ipsum 3"
+    "q": "Wie kriege ich den Beamer an?!",
+    "a": "Die Fernbedienung liegt in der Technik-Kammer"
+},
+{
+    "q": "Die Hilfe-Seite hilft mir nicht weiter?!",
+    "a": "jetzt kann ein Techniker oder Sachkundiger um Hilfe gebeten werden"
 }
 ];
 
 export const licht = [{
-    "q": "Frage 1",
-    "a": "Lorem Ipsum 1"
+    "q": "Das Licht geht nicht an?!",
+    "a": "Not-Aus-Schalter außer Kraft gesetzt (wenn Lampen glimmen-ja, wenn nicht-nein); Grand-Master auf 100%?; Master A und Master B auf 100%?; Fader für Lampen auf gewünschter %-zahl?; DMX Kabel in Stagebox (Kanal 20)?;"
 },
 {
-    "q": "Frage 2",
-    "a": "Lorem Ipsum 2"
+    "q": "Eine Lampe leuchtet nicht?!",
+    "a": "Sicherungen noch drin (Siehe grauer Schrank Band-Raum 1)?; Stecker der Lampe eingesteckt? (zur Not Kabel verfolgen); Leuchtmittel durchgebrannt? (siehe rigging)"
 },
 {
-    "q": "Frage 3",
-    "a": "Lorem Ipsum 3"
+    "q": "Das Lichtpult geht nicht?!",
+    "a": "Ist die Licht-Steckdose an?; Steckt das Netzteil drinnen?"
+},
+{
+    "q": "Ich möchte eigene/geliehene Geräte mit einbinden?!",
+    "a": "wenn wenig Ahnung von der Technik, Techniker um Hilfe bitten; bei dimmbaren Leuchtmitteln ausschließlich Licht-Steckdosen benutzen; bei sonstigen Geräten, DMX-Kabel und Stromkabel verlegen und bei Anbringen and gegenständen, jetzt den Rigging-Teil aufrufen"
+},
+{
+    "q": "Die Hilfe-Seite hilft mir nicht weiter?!",
+    "a": "jetzt kann ein Techniker oder Sachkundiger um Hilfe gebeten werden"
 }
 ];
 
 export const rigging = [{
-    "q": "Frage 1",
-    "a": "Lorem Ipsum 1"
+    "q": "Ich möchte das Licht/ sonstiges drehen (nicht umhängen)?!",
+    "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!; die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die Scheinwerfer ausrichten"
 },
 {
-    "q": "Frage 2",
-    "a": "Lorem Ipsum 2"
-},
+    "q": "Ich möchte etwas anbauen/abbauen/umhängen?!",
+    "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!;die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen; das Gewicht der Geräte nicht vernachlässigen!; am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen"
 {
-    "q": "Frage 3",
-    "a": "Lorem Ipsum 3"
+    "q": "Die Hilfe-Seite hilft mir nicht weiter?!",
+    "a": "jetzt kann ein Techniker oder Sachkundiger um Hilfe gebeten werden"
 }
 ];
