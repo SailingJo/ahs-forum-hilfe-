@@ -1,42 +1,47 @@
 const express = require('express');
 const router = express.Router();
 
-router.get("/", function (_, res) {
+router.get("/",  (_, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
-router.get("/audio", function (_, res) {
+router.get("/audio", (_, res) => {
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
-router.get("/audio-faq", function (_, res) {
+router.get("/audio-faq", (_, res) => {
     res.sendFile(__dirname + "/views/faq.html");
 });
 
-router.get("/video", function (_, res) {
+router.get("/video", (_, res) => {
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
-router.get("/video-faq", function (_, res) {
+router.get("/video-faq", (_, res) => {
     res.sendFile(__dirname + "/views/faq.html");
 });
 
-router.get("/licht", function (_, res) {
+router.get("/licht", (_, res) => {
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
-router.get("/licht-faq", function (_, res) {
+router.get("/licht-faq", (_, res) => {
     res.sendFile(__dirname + "/views/faq.html");
 });
 
-router.get("/rigging", function (_, res) {
+router.get("/rigging", (_, res) => {
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
-router.get("/rigging-faq", function (_, res) {
+router.get("/rigging-faq", (_, res) => {
     res.sendFile(__dirname + "/views/faq.html");
+});
+
+router.get("*", (_, res) => {
+    res.sendFile(__dirname + "/views/notfound.html")
 });
 
 module.exports = router;
 
-// TODO: Also send data attributes to make client fetch right data.
+// TODO: Also send data attributes to make client fetch right data. -> efficieny
+// TODO: Also fix to ES6
