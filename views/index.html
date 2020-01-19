@@ -18,13 +18,13 @@
         <button class="dropdown">FAQs</button>
         <div class="panel">
             <hr>
-            <p onclick="location.assign(`${location.href}audio-faq`);">Audio</p>
+            <p class="link" onclick="sendTo(`audio-faq`);">Audio</p>
             <hr>
-            <p onclick="location.assign(`${location.href}video-faq`);">Video</p>
+            <p class="link" onclick="sendTo(`video-faq`);">Video</p>
             <hr>
-            <p onclick="location.assign(`${location.href}licht-faq`);">Licht</p>
+            <p class="link" onclick="sendTo(`licht-faq`);">Licht</p>
             <hr>
-            <p onclick="location.assign(`${location.href}rigging-faq`);">Rigging</p>
+            <p class="link" onclick="sendTo(`rigging-faq`);">Rigging</p>
             <hr>
         </div>
         <button class="dropdown">Erklärungen</button>
@@ -49,6 +49,10 @@
 
                 panel.style.maxHeight = (panel.style.maxHeight ? null : `${panel.scrollHeight}px`);
             });
+        }
+
+        const sendTo = (string) => {
+            location.assign(`${location.origin}/${string}`);
         }
     </script>
 </body>
