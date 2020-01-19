@@ -36,7 +36,7 @@ export const video = [{
 
 export const licht = [{
     "q": "Das Licht geht nicht an?!",
-    "a": "Not-Aus-Schalter außer Kraft gesetzt (wenn Lampen glimmen-ja, wenn nicht-nein); Grand-Master auf 100%?; Master A und Master B auf 100%?; Fader für Lampen auf gewünschter %-zahl?; DMX Kabel in Stagebox (Kanal 20)?;"
+    "a": "Not-Aus-Schalter außer Kraft gesetzt (wenn Lampen glimmen-ja, wenn nicht-nein)?; Grand-Master auf 100%?; Master A und Master B auf 100%?; Fader für Lampen auf gewünschter %-zahl?; DMX Kabel in Stagebox (Kanal 20)?;"
 },
 {
     "q": "Eine Lampe leuchtet nicht?!",
@@ -57,12 +57,13 @@ export const licht = [{
 ];
 
 export const rigging = [{
-    "q": "Ich möchte das Licht/ sonstiges drehen (nicht umhängen)?!",
+    "q": "Ich möchte einen Scheinwerfer/sonstiges ausrichtn (nicht umhängen)?!",
     "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!; die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die Scheinwerfer ausrichten"
 },
 {
     "q": "Ich möchte etwas anbauen/abbauen/umhängen?!",
-    "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!;die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen; das Gewicht der Geräte nicht vernachlässigen!; am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen"
+    "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!BEI UNWISSEN TECHNIKER/SACHKUNDIGEN UM HILFE BITTEN!!!; die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen; das Gewicht der Geräte nicht vernachlässigen!; am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen !!!ACHTUNG: Nach Anbau jeglicher Gegenstände die nicht auf dem Boden stehen, oder auf und über Kopfhöhe hängen, mit einem Safety (Drahtseil mit Verbindungselement) zusaätzlich sichern!!!"
+},
 {
     "q": "Die Hilfe-Seite hilft mir nicht weiter?!",
     "a": "jetzt kann ein Techniker oder Sachkundiger um Hilfe gebeten werden"
