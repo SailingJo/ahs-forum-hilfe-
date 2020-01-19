@@ -1,4 +1,4 @@
-export const audio = [{
+const audio = [{
         "q": "Es kommt kein Ton",
         "a": "- Signalweg verfolgen und gucken ob alle Stecker drinnen stecken?\n- Vorverstärkung (Gain)?\n- Kanal-Fader?\n- Master?\n- Lautsprecher an?\n- Mischpult an?\n- Kabel kaputt? (testen/austauschen)\n- Mikrofon kaputt?"
     },
@@ -12,7 +12,7 @@ export const audio = [{
     }
 ];
 
-export const video = [{
+const video = [{
         "q": "Der Beamer findet die Quelle nicht",
         "a": "- Erst den Laptop einschalten, dann den Beamer\n- zwischen HDMI und VGA wehcseln\n- wenn möglich"
     },
@@ -26,7 +26,7 @@ export const video = [{
     }
 ];
 
-export const licht = [{
+const licht = [{
         "q": "Das Licht geht nicht an",
         "a": "- Not-Aus-Schalter außer Kraft gesetzt (wenn Lampen glimmen-ja, wenn nicht-nein)?\n- Grand-Master auf 100%?\n- Master A und Master B auf 100%?\n- Fader für Lampen auf gewünschter %-zahl?\n- DMX Kabel in Stagebox (Kanal 20)?"
     },
@@ -44,14 +44,39 @@ export const licht = [{
     }
 ];
 
-export const rigging = [{
+const rigging = [{
         "q": "Ich möchte einen Scheinwerfer/sonstiges ausrichtn (nicht umhängen)",
         "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!\n- die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die Scheinwerfer ausrichten"
     },
     {
         "q": "Ich möchte etwas anbauen/abbauen/umhängen",
         "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!\n!!!BEI UNWISSEN TECHNIKER/SACHKUNDIGEN UM HILFE BITTEN!!!\n!!!ACHTUNG: Nach Anbau jeglicher Gegenstände die nicht auf dem Boden stehen, oder auf und über Kopfhöhe hängen, mit einem Safety (Drahtseil mit Verbindungselement) zusaätzlich sichern!!!\n- die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen\n- das Gewicht der Geräte nicht vernachlässigen!\n- am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen"
-    // kommt dieser Teil nicht eher in "Erklärungen"?
-}];
+        // kommt dieser Teil nicht eher in "Erklärungen"?
+    }
+];
+
+export let faq;
+
+switch (window.location.pathname.split("/")[1].split("-")[0]) {
+    case "audio":
+        faq = audio;
+        document.querySelector("h1").innerText = "Audio - FAQ";
+        break;
+    case "video":
+        faq = video;
+        document.querySelector("h1").innerText = "Video - FAQ";
+        break;
+    case "licht":
+        faq = licht;
+        document.querySelector("h1").innerText = "Licht - FAQ";
+        break;
+    case "rigging":
+        faq = rigging;
+        document.querySelector("h1").innerText = "Rigging - FAQ";
+        break;
+    default:
+        console.error("Couldn't fetch corresponding data.");
+        break;
+}
 
 // Ausformulieren, wie bei einem Sachtext.
