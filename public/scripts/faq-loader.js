@@ -31,8 +31,9 @@ document.getElementById("search-bar").addEventListener("keyup", (event) => {
 
 document.getElementById("search-button").addEventListener("click", () => {
     const value = document.getElementById("search-bar").value;
+    const link = `${location.origin + location.pathname}`;
 
-    location.replace(location.href == `${location.origin + location.pathname}` ? `${location.href}?filter=${value}` : `${location.origin + location.pathname}?filter=${value}`);
+    location.replace(location.href == link ? `${location.href}?filter=${value}` : `${link}?filter=${value}`);
 });
 
 document.getElementById("search-clearer").addEventListener("click", () => {
