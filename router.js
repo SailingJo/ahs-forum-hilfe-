@@ -5,7 +5,7 @@ router.get("/",  (_, res) => {
     res.sendFile(__dirname + "/views/index.html");
 });
 
-router.get(["/audio", "/video", "/licht", "/rigging"], (_, res) => {
+router.get(["/audio-explanation", "/video-explanation", "/licht-explanation", "/rigging-explanation"], (_, res) => {
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
