@@ -8,7 +8,7 @@ export const audio = [{
     },
     {
         "q": "Es pfeift/brummt laut (Rückkopplung)",
-        "a": "- Lautstärke des Kanals mit der Rückkopplung verringer\n- zur Not den Master leiser machen"
+        "a": "- Lautstärke des Kanals mit der Rückkopplung verringern\n- zur Not den Master leiser machen"
     }
 ];
 
@@ -52,6 +52,6 @@ export const rigging = [{
         "q": "Ich möchte etwas anbauen/abbauen/umhängen",
         "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!\n!!!BEI UNWISSEN TECHNIKER/SACHKUNDIGEN UM HILFE BITTEN!!!\n!!!ACHTUNG: Nach Anbau jeglicher Gegenstände die nicht auf dem Boden stehen, oder auf und über Kopfhöhe hängen, mit einem Safety (Drahtseil mit Verbindungselement) zusaätzlich sichern!!!\n- die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen\n- das Gewicht der Geräte nicht vernachlässigen!\n- am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen"
     // kommt dieser Teil nicht eher in "Erklärungen"?
-];
+}];
 
 // Ausformulieren, wie bei einem Sachtext.
