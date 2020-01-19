@@ -5,31 +5,56 @@ let faq;
 switch (window.location.pathname.split("/")[1].split("-")[0]) {
     case "audio":
         faq = faqs.audio;
-        document.title = "Audio - FAQ";
+        document.querySelector("h1").innerText = "Audio - FAQ";
         break;
     case "video":
         faq = faqs.video;
-        document.title = "Video - FAQ";
+        document.querySelector("h1").innerText = "Video - FAQ";
         break;
     case "licht":
         faq = faqs.licht;
-        document.title = "Licht - FAQ";
+        document.querySelector("h1").innerText = "Licht - FAQ";
         break;
     case "rigging":
         faq = faqs.rigging;
-        document.title = "Rigging - FAQ";
+        document.querySelector("h1").innerText = "Rigging - FAQ";
         break;
 }
 
+document.getElementById("search-button").addEventListener("click", () => {
+    const value = document.getElementById('search-bar').value;
+
+    location.replace(location.href == `${location.origin + location.pathname}` ? `${location.href}?filter=${value}` : `${location.origin + location.pathname}?filter=${value}`);
+});
+
+document.getElementById("search-clearer").addEventListener("click", () => {
+    location.replace(location.origin + location.pathname);
+});
+
+const objectHasFilter = (object, filter) => {
+    if (!filter) return true;
+    if (object["q"].includes(filter) || object["a"].includes(filter)) return true;
+}
+
+const getParameter = (param) => {
+    const url = new URL(location.href);
+
+    return url.searchParams.get(param);
+}
+
 const panelCreate = (faqray) => {
+    const filter = location.search == "" ? null : getParameter("filter");
+
     for (let obj of faqray) {
+        if (!objectHasFilter(obj, filter)) continue;
+
         let button = document.createElement("button");
         button.classList.add("dropdown");
         button.innerText = obj["q"];
 
         button.addEventListener("click", (event) => {
             event.target.classList.toggle("active");
-    
+
             let panel = event.target.nextElementSibling;
 
             panel.style.maxHeight = (panel.style.maxHeight ? null : `${panel.scrollHeight}px`);
@@ -44,6 +69,10 @@ const panelCreate = (faqray) => {
         document.querySelector("#list").append(button);
         document.querySelector("#list").append(div);
         div.append(p);
+    }
+
+    if (document.querySelector("#list").childElementCount == 1) {
+        document.querySelector("#empty").classList.remove("hidden")
     }
 }
 

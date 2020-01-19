@@ -3,15 +3,54 @@
 <html lang="de">
 
 <head>
-    <title>Hilfe</title>
+    <title>Forum Technikhilfe</title>
     <meta charset="UTF-8">
     <meta name="author" content="David Penkowoj">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    HILFE MAIN
+    <h1>Forum Technikhilfe</h1>
+    <h2>Rechte bei Jesper-Ole Wehrsig & David Penkowoj</h2>
+    <div>
+        <button class="dropdown">FAQs</button>
+        <div class="panel">
+            <hr>
+            <p onclick="location.assign(`${location.href}audio-faq`);">Audio</p>
+            <hr>
+            <p onclick="location.assign(`${location.href}video-faq`);">Video</p>
+            <hr>
+            <p onclick="location.assign(`${location.href}licht-faq`);">Licht</p>
+            <hr>
+            <p onclick="location.assign(`${location.href}rigging-faq`);">Rigging</p>
+            <hr>
+        </div>
+        <button class="dropdown">Erklärungen</button>
+        <div class="panel">
+            <p>Fehlen noch</p>
+        </div>
+        <button class="dropdown">FTH Dienste</button>
+        <div class="panel">
+            <p>Fehlen auch noch</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const buttons = document.getElementsByClassName("dropdown");
+
+        for (let i = 0; i < buttons.length; i++) {
+            if (i == buttons.length) continue;
+
+            buttons[i].addEventListener("click", (event) => {
+                event.target.classList.toggle("active");
+
+                let panel = event.target.nextElementSibling;
+
+                panel.style.maxHeight = (panel.style.maxHeight ? null : `${panel.scrollHeight}px`);
+            });
+        }
+    </script>
 </body>
 
 </html>
