@@ -21,8 +21,16 @@ switch (window.location.pathname.split("/")[1].split("-")[0]) {
         break;
 }
 
+document.getElementById("search-bar").addEventListener("keyup", (event) => {
+    if (event.key == "Enter") {
+        event.preventDefault();
+
+        document.getElementById("search-button").click();
+    }
+});
+
 document.getElementById("search-button").addEventListener("click", () => {
-    const value = document.getElementById('search-bar').value;
+    const value = document.getElementById("search-bar").value;
 
     location.replace(location.href == `${location.origin + location.pathname}` ? `${location.href}?filter=${value}` : `${location.origin + location.pathname}?filter=${value}`);
 });
@@ -33,7 +41,7 @@ document.getElementById("search-clearer").addEventListener("click", () => {
 
 const objectHasFilter = (object, filter) => {
     if (!filter) return true;
-    if (object["q"].includes(filter) || object["a"].includes(filter)) return true;
+    if (object["q"].toLowerCase().includes(filter) || object["a"].toLowerCase().includes(filter)) return true;
 }
 
 const getParameter = (param) => {
@@ -43,7 +51,7 @@ const getParameter = (param) => {
 }
 
 const panelCreate = (faqray) => {
-    const filter = location.search == "" ? null : getParameter("filter");
+    const filter = location.search == "" ? null : getParameter("filter").toLowerCase();
 
     for (let obj of faqray) {
         if (!objectHasFilter(obj, filter)) continue;
@@ -72,7 +80,7 @@ const panelCreate = (faqray) => {
     }
 
     if (document.querySelector("#list").childElementCount == 1) {
-        document.querySelector("#empty").classList.remove("hidden")
+        document.querySelector("#empty").classList.remove("hidden");
     }
 }
 
