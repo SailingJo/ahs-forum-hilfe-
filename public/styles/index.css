@@ -82,3 +82,7 @@ h2 {
     box-shadow: 0 0 20px #000000;
     transition: all 0.1s ease-in-out;
 }
+
+.link {
+    cursor: pointer;
+}
