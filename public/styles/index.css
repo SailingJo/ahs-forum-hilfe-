@@ -12,6 +12,17 @@ body {
     background-color: #f39c12;
 }
 
+noscript {
+    display: block;
+    padding: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    background-color: #c0392b;
+    font-family: "Alata", sans-serif;
+}
+
 h1 {
     color: #ffffff;
     text-align: center;
