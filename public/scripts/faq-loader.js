@@ -1,25 +1,4 @@
-import * as faqs from "./faq-data.js";
-
-let faq;
-
-switch (window.location.pathname.split("/")[1].split("-")[0]) {
-    case "audio":
-        faq = faqs.audio;
-        document.querySelector("h1").innerText = "Audio - FAQ";
-        break;
-    case "video":
-        faq = faqs.video;
-        document.querySelector("h1").innerText = "Video - FAQ";
-        break;
-    case "licht":
-        faq = faqs.licht;
-        document.querySelector("h1").innerText = "Licht - FAQ";
-        break;
-    case "rigging":
-        faq = faqs.rigging;
-        document.querySelector("h1").innerText = "Rigging - FAQ";
-        break;
-}
+import { faq } from "./faq-data.js";
 
 document.getElementById("search-bar").addEventListener("keyup", (event) => {
     if (event.key == "Enter") {
@@ -51,10 +30,10 @@ const getParameter = (param) => {
     return url.searchParams.get(param);
 }
 
-const panelCreate = (faqray) => {
+const panelCreate = (faqArray) => {
     const filter = location.search == "" ? null : getParameter("filter").toLowerCase();
 
-    for (let obj of faqray) {
+    for (let obj of faqArray) {
         if (!objectHasFilter(obj, filter)) continue;
 
         let button = document.createElement("button");

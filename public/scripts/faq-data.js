@@ -1,4 +1,4 @@
-export const audio = [{
+const audio = [{
         "q": "Es kommt kein Ton",
         "a": "- Den Signalweg verfolgen und gucken ob alle Stecker drinnen stecken\n- Den Gain (Vorverstärkung) höher drehen\n- Lautstärke des Kanals überprüfen und gegebenfalls erhöhen\n- Lautstärke des Masters überprüfen und gegebenfalls erhöhen\n- Gucken ob die Lautsprecher eingeschaltet sind\n- Überprüfen ob das Mischpult eingeschaltet ist\n- Sichergehen, dass das Kabel nicht defekt ist (testen und gegebenenfalls austauschen)\n- Nachschauen ob das Mikrofon in Ordnung ist (austauschen um zu überprüfen)"
     },
@@ -12,7 +12,7 @@ export const audio = [{
     }
 ];
 
-export const video = [{
+const video = [{
         "q": "Der Beamer findet die Quelle nicht",
         "a": "- Erst den Laptop einschalten, dann den Beamer\n- Wenn möglich zwischen HDMI und VGA wechseln"
     },
@@ -26,7 +26,7 @@ export const video = [{
     }
 ];
 
-export const licht = [{
+const licht = [{
         "q": "Das Licht geht nicht an",
         "a": "- Der Not-Aus-Schalter muss außer Kraft gesetzt sein (wenn Lampen glimmen-ja, wenn nicht-nein)\n- Der Grand-Master sollte auf 100% stehen\n- Die Master A und Master B sollten ebenfalls auf 100%?\n- Der Fader der Lampe sollte die gewünschte %-zahl betragen\n- Das DMX Kabel muss in der Stagebox in der Buchse des Kanals 20 stecken, ebenso sollte vom Lichtpult aus ein Kabel zum Stecker 20 des Multicores führen"
     },
@@ -44,8 +44,8 @@ export const licht = [{
     }
 ];
 
-export const rigging = [{
-        "q": "Ich möchte einen Scheinwerfer/sonstiges ausrichten (nicht umhängen)",
+const rigging = [{
+        "q": "Ich möchte einen Scheinwerfer/sonstiges ausrichtn (nicht umhängen)",
         "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!\n- die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die Scheinwerfer ausrichten"
     },
     {
@@ -53,5 +53,29 @@ export const rigging = [{
         "a": "!!!JEGLICHE ARBEITEN MINDESTENS ZU ZWEIT ERLEDIGEN!!!\n!!!JEDE ÄNDERUNG IST DER ZUSTÄNDIGEN LEHRKRAFT ODER EINEM TECHNIKER UNUMGEHEND ZU BERICHTEN!!!\n!!!BEI UNWISSEN TECHNIKER/SACHKUNDIGEN UM HILFE BITTEN!!!\n!!!ACHTUNG: Nach Anbau jeglicher Gegenstände die nicht auf dem Boden stehen, oder auf und über Kopfhöhe hängen, mit einem Safety (Drahtseil mit Verbindungselement) zusaätzlich sichern!!!\n- die große Leiter nehmen, eine Person die Leiter halten lassen, und dann vorsichtig die zu verichtenden Arbeiten beginnen\n- das Gewicht der Geräte nicht vernachlässigen!\n- am besten mit einem Seil die geräte von der zweiten Person hochziehen/ablassen/sichern lassen"
     // kommt dieser Teil nicht eher in "Erklärungen"?
 }];
+
+export let faq;
+
+switch (window.location.pathname.split("/")[1].split("-")[0]) {
+    case "audio":
+        faq = audio;
+        document.querySelector("h1").innerText = "Audio - FAQ";
+        break;
+    case "video":
+        faq = video;
+        document.querySelector("h1").innerText = "Video - FAQ";
+        break;
+    case "licht":
+        faq = licht;
+        document.querySelector("h1").innerText = "Licht - FAQ";
+        break;
+    case "rigging":
+        faq = rigging;
+        document.querySelector("h1").innerText = "Rigging - FAQ";
+        break;
+    default:
+        console.error("Couldn't fetch corresponding data.");
+        break;
+}
 
 // Ausformulieren, wie bei einem Sachtext.

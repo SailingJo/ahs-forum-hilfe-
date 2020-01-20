@@ -1,28 +1,7 @@
-import * as explanations from "./explanation-data.js";
+import { explanation } from "./explanation-data.js";
 
-let explanation;
-
-switch (window.location.pathname.split("/")[1].split("-")[0]) {
-    case "audio":
-        explanation = explanations.audio;
-        document.querySelector("h1").innerText = "Audio - Erklärung";
-        break;
-    case "video":
-        explanation = explanations.video;
-        document.querySelector("h1").innerText = "Video - Erklärung";
-        break;
-    case "licht":
-        explanation = explanations.licht;
-        document.querySelector("h1").innerText = "Licht - Erklärung";
-        break;
-    case "rigging":
-        explanation = explanations.rigging;
-        document.querySelector("h1").innerText = "Rigging - Erklärung";
-        break;
-}
-
-const contentCreate = (explanationray) => {
-    for (let obj of explanationray) {
+const contentCreate = (explanationArray) => {
+    for (let obj of explanationArray) {
         let t = obj["t"];
         let ref = `${t.toLowerCase().replace(" ", "-")}`;
 
