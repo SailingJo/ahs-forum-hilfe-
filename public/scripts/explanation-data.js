@@ -10,13 +10,28 @@ const audio = [{
 }];
 
 const video = [{
-    "t": "Lorem",
-    "p": "Lorem ipsum dolor"
+    "t": "Das Einschalten der Technik",
+    "p": "Zuerst sollte der Laptop an das VGA- oder HDMI-Kabel angeschlossen und eingeschaltet werden. Diese befinden sich auf der rechten Bühnenseite in der Niesche aufgerwickelt an der Wand (dort wo auch die Stagebox liegt).\nWenn das Betriebssystem fertig geladen ist, kann der Beamer eingeschaltet werden. Die Fernbedienung sollte in der Technikkammer in dem Schrank gerade vor liegen."
 }];
 
 const licht = [{
-    "t": "Lorem",
-    "p": "Lorem ipsum dolor"
+    "t": "Das Einschalten der Technik",
+    "p": "1. Die Lichtsteckdose einschalten.\n2. Die Not-Aus-Schalter außer Kraft setzen.\n3. An dem Lichtpult den 'Grandmaster' und die Master 'A' und 'B' auf 10 stellen.\n4. Den Modus je nach Bedarf einstellen. Siehe Modi unten."
+}, {
+    "t": "Preset-Modus für den normalen Betrieb (DS, kleine Veranstaltungen)",
+    "p": "Um in den Preset-Modus zu gelangen, muss die 'Mode'-Taste gedrückt gehalten werden. Man erkennt den Modus in, dem sich das Pult befindet, an den LEDs neben der Taste.\nWenn sich das Pult im Preset-Modus befindet, muss die '13-24'-LED bei der Taste 'Preset B' leuchten, um alle Scheinwerfer benutzen zu können. Durch das Drücken der Taste kann dies sichergestellt werden.\nJetzt ist es möglich alle Fader zu benutzen, sofern sie belegt sind. Dazu gehören hauptächlich die 'normalen' Scheinwerfer und nicht die LEDs. Die LEDs sind eine Sache für sich und bei denen bedarf es mehr als nur den Fader nach oben zu schieben. Deshalb haben die LEDs auch einen Bereuih für sich."
+}, {
+    "t": "Run-Modus für den Show-Betrieb (Musical und Theater)",
+    "p": "--Auch für Klausurersatzleistungen in DS ist der Preset-Modus ausreichend!--\n "
+}, {
+    "t": "Die LEDs",
+    "p": "Die LEDs liegen nicht immer auf den gleichen DMX-Kanälen und Fadern. Am besten bei Bedarf nach einem Zettel in der Nähe des Lichtpultes oder in der Technikkammer suchen. Wenn keiner gefunden wird, ausprobieren oder einen Techniker/Sachkundigen fragen.\nBei den Fadern sieht es dan wie folgt aus (alle Angaben außer der Funktion sind abhängig vom Farbmischmodus):\n  Funktion - Dieser Fader bestimmt in welchem Modus die LEDs laufen. Um den Farbmischmodus zu benutzten, muss sich der Fader auf auf ca. 1,8 befinden.\n  Dim - Dieser Fader bestimmt im Farbmischmodus die Gesamt-helligkeit der LED.\n  Rot - Dieser Fader bestimmt im Farbmischmodus die Helligkeit der Farbe rot.\n  Grün - Dieser Fader bestimmt im Farbmischmodus die Helligkeit der Farbe grün.\n  Blau - Dieser Fader bestimmt im Farbmischmodus die Helligkeit der Farbe blau"
+}, {
+    "t": "Die Nebelmaschine",
+    "p": "Die Nebelmaschine darf (Stand: 22.01.2020) offiziell nicht benutzt werden. Bei Fragen, bitte an Techniker und Lehrkräfte wenden."
+}, {
+    "t": "Das Ausschalten der Technik",
+    "p": "1. Alle Fader auf 0 stellen.\n2. Alle Master auf 0 stellen.\n3. Einen Not-Aus-Schalter reindrücken.\n4. Lichtsteckdose ausschalten."
 }];
 
 const rigging = [{
