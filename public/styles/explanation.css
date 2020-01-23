@@ -38,6 +38,7 @@ h2 {
 }
 
 p, a {
+    display: block;
     color: #ffffff;
     padding-left: 40px;
 }
