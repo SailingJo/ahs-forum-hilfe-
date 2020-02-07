@@ -65,7 +65,7 @@ const vokabular = [{
     "a": "Ein Drehregler."
 }, {
     "q": "EQ (Equalizer)",
-    "a": "Potis zum Verstellen der Frequenzen der Audio. Sprich: Finetuning."
+    "a": "Potis zum Verstellen der Frequenzen der Audio.\nSprich: Finetuning."
 }, {
     "q": "Stagebox",
     "a": "Eine Anschlussbox für Tonkabel."
@@ -136,7 +136,7 @@ const vokabular = [{
     "q": "Rack",
     "a": "Eine Art Case, in der 19''-Fähige Elemente eingebaut werden"
 }];
-
+                                                                                                                    
 export let faq;
 
 switch (window.location.pathname.split("/")[1].split("-")[0]) {
