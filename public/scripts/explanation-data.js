@@ -7,9 +7,6 @@ const audio = [{
 }, {
     "t": "Das Ausschalten der Technik",
     "p": "1. Die Fader der Kanalzüge runterziehen (damit es beim nächsten Einschalten keine Rückkopplung gibt).\n2. Die Lautsprecher ausschalten.\n3. Die Endstufe ausschlalten\n4. --NUR BEIM DIGITALPULT-- Erst die Taste 'Home' drücken und dann auf dem Display 'Shutdown' drücken.\n5. Die Tonsteckdose ausschalten"
-}, {
-    "t": "FACHWÖRTER",
-    "p": "Fader -> Schieberegler\nPoti (Potentiometer) -> Drehregler\nStagebox -> Anschlussbox für Tonkabel\nMulticore -> Bündel an an Tonkabeln, die zu einem dicken Kabel zusammen kommen\nTalkback -> Mikrofon des Tontechnikers, das auf die Monitore geht\nGod-Mic -> Mikrofon des Tontechnikers, das auf allen Lautsprechern zu hören ist\nPFL (Pre-Fader-Listening) -> Den jeweils ausgewählten Fader vorhören (auf den an den Pult angeschlossenen Kopfhörern)\nMonitor -> Lautsprecher, über den sich die Darsteller/Musiker etwas hören (z.B. beim Singen sich selbst)\nPowermixer -> Mischpult mit eingebauter Endstufe\nFeedback/Rückkopplung -> Das Mikrofon nimmt den eigenen aufgenommenen Schall aus dem Lautsprecher wieder auf und es fängt an ein Ton an laut zu werden\nPan (Panorama) -> Poti zum Verstellen der Richtung aus welchem Lautsprecher der Ton kommt (L & R)\nTraverse/Truss/Pipe -> Befestigungsrohr/-vorrichtung aus Metall zu Anbringen von Gegenständen\nIntercom -> Internes Kommunikationsystem für Kommunikation im Technik- und Orga-team während Veranstaltungen"
 }];
 
 const video = [{
@@ -35,17 +32,11 @@ const licht = [{
 }, {
     "t": "Das Ausschalten der Technik",
     "p": "1. Alle Fader auf 0 stellen.\n2. Alle Master auf 0 stellen.\n3. Einen Not-Aus-Schalter reindrücken.\n4. Lichtsteckdose ausschalten."
-}, {
-    "t": "FACHWÖRTER",
-    "p": "Fader -> Schieberegler\nPoti (Potentiometer) -> Drehregler\nChaser -> Lauflicht\nDMX -> Digitales Übertragungs-'Signal' des Lichtpults\nVerfolger/Follow Spot -> Großer handbetriebener Scheinwerfer zum Verfolgen von Personen\nTraverse/Truss/Pipe -> Befestigungsrohr/-vorrichtung aus Metall zu Anbringen von Gegenständen\nFluid -> Flüssigkeit\nIntercom -> Internes Kommunikationsystem für Kommunikation im Technik- und Orga-team während Veranstaltungen"
 }];
 
 const rigging = [{
     "t": "Lorem",
     "p": "Lorem ipsum dolor"
-}, {
-    "t": "FACHWÖRTER",
-    "p": "DMX -> Digitales Übertragungs-'Signal' des Lichtpults\nVerfolger/Follow Spot -> Großer handbetriebener Scheinwerfer zum Verfolgen von Personen\nTraverse/Truss/Pipe -> Befestigungsrohr/-vorrichtung aus Metall zu Anbringen von Gegenständen\nFluid -> Flüssigkeit\nIntercom -> Internes Kommunikationsystem für Kommunikation im Technik- und Orga-team während Veranstaltungen"
 }];
 
 export let explanation;
