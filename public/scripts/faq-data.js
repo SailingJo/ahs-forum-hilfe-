@@ -134,7 +134,7 @@ const vokabular = [{
     "a": "Ein aus Multiplex-Holz gefertigter Koffer. Äußerst stabil."
 }, {
     "q": "Rack",
-    "a": "Eine Art Case, in der 19''-Fähige Elemente eingebaut werden"
+    "a": "Eine Art Case, in dem 19''-Fähige Elemente eingebaut werden"
 }];
                                                                                                                     
 export let faq;
