@@ -9,7 +9,7 @@ router.get(["/audio-explanation", "/video-explanation", "/licht-explanation", "/
     res.sendFile(__dirname + "/views/explanation.html");
 });
 
-router.get(["/audio-faq", "/video-faq", "/licht-faq", "/rigging-faq"], (_, res) => {
+router.get(["/audio-faq", "/video-faq", "/licht-faq", "/rigging-faq", "/vokabular-faq"], (_, res) => {
     res.sendFile(__dirname + "/views/faq.html");
 });
 

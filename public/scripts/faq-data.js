@@ -54,6 +54,11 @@ const rigging = [{
     // kommt dieser Teil nicht eher in "Erklärungen"?
 }];
 
+const vokabular = [{
+    "q": "Fader",
+    "a": "Ein Schieberegler"
+}];
+
 export let faq;
 
 switch (window.location.pathname.split("/")[1].split("-")[0]) {
@@ -73,6 +78,9 @@ switch (window.location.pathname.split("/")[1].split("-")[0]) {
         faq = rigging;
         document.querySelector("h1").innerText = "Rigging - FAQ";
         break;
+    case "vokabular":
+        faq = vokabular;
+        document.querySelector("h1").innerText = "Fachvokabular - FAQ"
     default:
         console.error("Couldn't fetch corresponding data.");
         break;
