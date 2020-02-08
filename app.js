@@ -65,4 +65,4 @@ app.use(middleware)
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 
-app.listen(port, console.log(colors.green(`Forum Technikhilfe läuft auf http://${ip.address()}:${port}/`)));
+app.listen(port, console.log(colors.green(`Hilfe Fuchs läuft auf http://${ip.address()}:${port}/`)));
