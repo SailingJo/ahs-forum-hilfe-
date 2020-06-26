@@ -41,7 +41,7 @@ const rigging = [{
 
 export let explanation;
 
-switch (window.location.pathname.split("/")[1].split("-")[0]) {
+switch (window.location.pathname.split("/")[2]) {
     case "audio":
         explanation = audio;
         document.querySelector("h1").innerText = "Audio - Erklärung";

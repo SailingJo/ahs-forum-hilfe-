@@ -4,7 +4,7 @@ const colors = require("colors");
 const express = require("express");
 const app = express();
 
-const port = 2000
+const port = 8000;
 const router = require("./router");
 
 const readStats = () => {
@@ -58,10 +58,11 @@ const middleware = (req, res, next) => {
       dumpStats(stats);
     }
   });
+  
   next();
 }
 
-app.use(middleware)
+app.use(middleware);
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 
