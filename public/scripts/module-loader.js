@@ -18,7 +18,12 @@ const runCategory = async () => {
     case "faq":
       import("./faq-data.js").then((module) => {
         listenForSearch();
-        panelCreate(module.faq);
+        panelCreate(module.faq).then(() => {
+          if (document.querySelector("#list").childElementCount == 1) {
+            console.log(document.querySelector("#list").childElementCount);
+            document.querySelector("#empty").classList.remove("hidden");
+          }
+        });
       });
       break;
     case "explanation":
@@ -29,7 +34,12 @@ const runCategory = async () => {
     case "other":
       import("./other-data.js").then((module) => {
         listenForSearch();
-        panelCreate(module.module);
+        panelCreate(module.module).then(() => {
+          if (document.querySelector("#list").childElementCount == 1) {
+            console.log(document.querySelector("#list").childElementCount);
+            document.querySelector("#empty").classList.remove("hidden");
+          }
+        });
       });
       break;
     default:
@@ -91,10 +101,6 @@ const panelCreate = async (faqArray) => {
     }
   } catch (e) {
     console.error("Error: " + e);
-  }
-
-  if (document.querySelector("#list").childElementCount == 1) {
-    document.querySelector("#empty").classList.remove("hidden");
   }
 }
 

@@ -38,7 +38,6 @@ const _chooseStatusCode = (statusCode) => {
     case "3":
       return colors.yellow(statusCode);
     case "4":
-      return colors.red(statusCode);
     case "5":
       return colors.red(statusCode);
   }
@@ -49,7 +48,7 @@ const middleware = (req, res, next) => {
     let statusCode = _chooseStatusCode(res.statusCode.toString());
 
     const stats = readStats();
-    const event = `${req.method} ${statusCode} ${req.originalUrl}`;
+    const event = `[ ${statusCode} ] [ ${colors.grey(new Date(Date.now()).toLocaleString("de"))} ] ${req.method} ${req.originalUrl}`;
 
     console.log(event);
 
