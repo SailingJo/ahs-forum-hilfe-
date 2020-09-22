@@ -5,7 +5,9 @@ const express = require("express");
 const app = express();
 
 const port = 8000;
-const router = require("./router");
+const router = require("./controllers/router");
+
+const logger = require("./handlers/logger");
 
 const readStats = () => {
   let result = {};
@@ -29,39 +31,21 @@ const dumpStats = (stats) => {
   }
 }
 
-const _chooseStatusCode = (statusCode) => {
-  switch (statusCode.charAt(0)) {
-    case "1":
-      return colors.blue(statusCode);
-    case "2":
-      return colors.green(statusCode);
-    case "3":
-      return colors.yellow(statusCode);
-    case "4":
-    case "5":
-      return colors.red(statusCode);
-  }
-}
-
-const middleware = (req, res, next) => {
-  res.on("finish", () => {
-    let statusCode = _chooseStatusCode(res.statusCode.toString());
-
-    const stats = readStats();
-    const event = `[ ${statusCode} ] [ ${colors.grey(new Date(Date.now()).toLocaleString("de"))} ] ${req.method} ${req.originalUrl}`;
-
-    console.log(event);
-
-    if (req.originalUrl == "/") {
-      stats[event] = stats[event] ? stats[event] + 1 : 1;
-      dumpStats(stats);
-    }
-  });
-  
+const loghook = (req, res, next) => {
+  res.on("finish", () => logger.logHandshake(req, res));
   next();
 }
 
-app.use(middleware);
+const cookiehook = () => {
+  const stats = readStats();
+
+  if (req.originalUrl == "/") {
+    stats[event] = stats[event] ? stats[event] + 1 : 1;
+    dumpStats(stats);
+  }
+}
+
+app.use(loghook);
 app.use(express.static(__dirname + "/public"));
 app.use("/", router);
 

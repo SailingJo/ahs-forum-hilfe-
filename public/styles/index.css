@@ -38,6 +38,20 @@ h2 {
     font-family: "Alata", sans-serif;
 }
 
+a {
+  display: block;
+
+  color: #ffffff;
+  font-size: 16px;
+  padding: 1em 0 1em;
+  text-decoration: none;
+  font-family: "Alata", "Roboto", sans-serif;
+}
+
+a:not(:last-of-type) {
+  border-bottom: 2px solid #00000040;
+}
+
 #cardlist {
     padding-top: 75px;
     text-align: center;

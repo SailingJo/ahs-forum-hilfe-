@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SailingJo/ahs-forum-hilfe.git"
+    "url": "git+https://github.com/SailingJo/forum-bob.git"
   },
   "author": "Jesper-Ole Wehrsig & David Penkowoj",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SailingJo/ahs-forum-hilfe/issues"
+    "url": "https://github.com/SailingJo/forum-bob/issues"
   },
-  "homepage": "https://github.com/SailingJo/ahs-forum-hilfe#readme"
+  "homepage": "https://github.com/SailingJo/forum-bob#readme"
 }
