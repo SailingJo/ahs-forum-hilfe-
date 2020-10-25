@@ -5,6 +5,9 @@ const vokabular = [{
   "q": "Fader",
   "a": "Ein Schieberegler."
 }, {
+  "q": "Gain",
+  "a": "Die Vorverstärkung eines Audiosignals am Mischpult, bevor das Signal prozessiert wird."
+}, {
   "q": "Poti (Potentiometer)",
   "a": "Ein Drehregler."
 }, {
